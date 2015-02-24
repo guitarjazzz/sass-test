@@ -1,0 +1,67 @@
+$tablet-width: 1024px;
+$desktop-width: 1280px;
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet-width}){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin text-shadow($shadow){
+  -moz-text-shadow: $shadow;
+  -webkit-text-shadow: $shadow;
+  -ms-text-shadow: $shadow;
+  text-shadow: $shadow;
+}
+@mixin user-select($select){
+  
+  -webkit-user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select;
+  user-select: $select;
+}
+@mixin box-shadow($shadow){
+  -webkit-box-shadow: $shadow;
+  // -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transition($transition){
+  -webkit-transition:$transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+@mixin transform($transform){
+  -webkit-transform:$transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+@mixin transform-origin($transform-origin){
+  -webkit-transform-origin:$transform-origin;
+  -moz-transform-origin: $transform-origin;
+  -ms-transform-origin: $transform-origin;
+  -o-transform-origin: $transform-origin;
+  transform-origin: $transform-origin;
+}
+@mixin box-sizing($box-sizing){
+  -moz-box-sizing: $box-sizing;
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+}

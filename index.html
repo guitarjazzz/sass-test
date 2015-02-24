@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <title>Sass Test</title>
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+
+        <!-- iOS icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="images/touch/apple-touch-icon-57x57-precomposed.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+
+        <!-- Generic Icon -->
+        <link rel="shortcut icon" href="images/touch/touch-icon-57x57.png">
+
+        <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+        <!--
+        <link rel="canonical" href="http://www.example.com/">
+        -->
+
+        <!-- Chrome Add to Homescreen -->
+        <link rel="shortcut icon" sizes="196x196" href="images/touch/touch-icon-196x196.png">
+
+        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+        <!--
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        -->
+
+        <!-- bower components:bootstrap -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="styles/css/style.css">
+    </head>
+    <body onload='loadPage()'>
+        <div id="target">Loading...</div>
+        <script id="template" type="x-tmpl-mustache">
+            <header>
+                <div class="header">
+                    <nav>
+                        <div class="navigation">
+                            <a href="" class="menuIcon btnIcons">
+                                <span class=" glyphicon glyphicon-menu-hamburger"></span>
+                            </a>
+                            <a href="" class='filterName'>
+                                Title
+                                <span class='glyphicon glyphicon-triangle-bottom'></span>
+                            </a>
+                            <a href="" class='searchIcon btnIcons'>
+                                <span class='glyphicon glyphicon-search'></span>
+                            </a>
+                            <a href="" class='optionIcon btnIcons'>
+                                <span class="glyphicon glyphicon-option-vertical"></span>
+                            </a>
+                            <a href="" class="addBtn">
+                                <span>+</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div><!-- .header -->
+            </header>
+            <div class="wrapper">
+                <main>
+                    <div class='userList'>
+                        <div class="usersWrap">
+                            <div class='filterIcon'>
+                                <span class='glyphicon glyphicon-star'></span>
+                            </div>
+                            {{#usersFavourite}}
+                                <div class="userItem">
+                                    <div class='userIcon'>
+                                        <img src="{{#userIcon}}{{ . }}{{/userIcon}}" alt="">
+                                    </div>
+                                    <div class="userName">{{#userName}}{{ . }}{{/userName}}</div>
+                                    <a class='userLink' href="{{#userLink}}{{ . }}{{/userLink}}"></a>
+                                </div>
+                            {{/usersFavourite}}
+                        </div><!-- .usersWrap -->
+                        <div class="usersWrap">
+                            <div class='filterIcon'>
+                                <span>A</span>
+                            </div>
+                            {{#usersA}}
+                                <div class="userItem">
+                                    <div class='userIcon'>
+                                        <img src="{{#userIcon}}{{ . }}{{/userIcon}}" alt="">
+                                    </div>
+                                    <div class="userName">{{#userName}}{{ . }}{{/userName}}</div>
+                                    <a class='userLink' href="{{#userLink}}{{ . }}{{/userLink}}"></a>
+                                </div>
+                            {{/usersA}}
+                        </div><!-- .usersWrap -->
+                        <div class="usersWrap">
+                            <div class='filterIcon'>
+                                <span>B</span>
+                            </div>
+                            {{#usersB}}
+                                <div class="userItem">
+                                    <div class='userIcon'>
+                                        <img src="{{#userIcon}}{{ . }}{{/userIcon}}" alt="">
+                                    </div>
+                                    <div class="userName">{{#userName}}{{ . }}{{/userName}}</div>
+                                    <a class='userLink' href="{{#userLink}}{{ . }}{{/userLink}}"></a>
+                                </div>
+                            {{/usersB}}
+                        </div><!-- .usersWrap -->
+                    </div><!-- .userList -->
+                    <div class='userCard'>
+                        <div class="userCardTop">
+                            <div class="userCardMenu">
+                                <a class='btnIcons btnBack' href="">
+                                    <span class='glyphicon glyphicon-arrow-left'></span>
+                                </a>
+                                <a class='btnIcons btnPencil' href="">
+                                    <span class='glyphicon glyphicon-pencil'></span>
+                                </a>
+                                <a class='btnIcons btnStar' href="">
+                                    <span class='glyphicon glyphicon-star'></span>
+                                </a>
+                                <a class='btnIcons btnShare' href="">
+                                    <span class='glyphicon glyphicon-share-alt'></span>
+                                </a>
+                                <a class='btnIcons btnOption' href="">
+                                    <span class='glyphicon glyphicon-option-vertical'></span>
+                                </a>
+                            </div><!-- .userCardMenu -->
+                            <h1 class='userCardName'>Ali Connors</h1>
+                            <a href="" class="addBtn">
+                                <span class='glyphicon glyphicon-star'></span>
+                            </a>
+                        </div><!-- .userCardTop -->
+                        <div class="userCardInfo">
+                            <div class="userCardSection userCardPhone">
+                                <div class='userCardIcon'>
+                                    <span class='glyphicon glyphicon-earphone'></span>
+                                </div>
+                                <div class="userCardItem">
+                                    <p>(650) 555-1234</p>
+                                    <h4>Mobile</h4>
+                                    <a href='' class='hangoutIcon'></a>
+                                </div>
+                                <div class="userCardItem">
+                                    <p>(323) 555-6789</p>
+                                    <h4>Work</h4>
+                                    <a href='' class='hangoutIcon'></a>
+                                </div>
+                            </div><!-- .userCardPhone -->
+                            <div class="userCardSection userCardEmail">
+                                <div class='userCardIcon'>
+                                    <span class='glyphicon glyphicon-envelope'></span>
+                                </div>
+                                <div class="userCardItem">
+                                    <p>aliconnors@example.com</p>
+                                    <h4>Personal</h4>
+                                </div>
+                                <div class="userCardItem">
+                                    <p>ali_connors@example.com</p>
+                                    <h4>Work</h4>
+                                </div>
+                            </div><!-- .userCardEmail -->
+                            <div class="userCardSection userCardAdress">
+                                <div class='userCardIcon'>
+                                    <span class='glyphicon glyphicon-map-marker'></span>
+                                </div>
+                                <div class="userCardItem">
+                                    <p>2000 SW 1st Ave<br> San Francisco, CA 94112</p>
+                                    <h4>Home</h4>
+                                </div>
+                                <div class="userCardItem">
+                                    <p>1600 Amphitheatre Pkwy<br> Mountain View, CA 94043</p>
+                                    <h4>Work</h4>
+                                </div>
+                            </div><!-- .userCardAdress -->
+                        </div><!-- .userCardInfo -->
+                    </div><!-- .userCard -->
+                </main>
+            </div><!-- .wrapper -->
+        </script>
+        <!-- Bower Components:jQuery -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bower Components:Twitter Bootstrap -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Bower Components:Mustache -->
+        <script src="bower_components/mustache/mustache.min.js"></script>
+        
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+        <!--
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+         -->
+        <!-- Built with love using Web Starter Kit -->
+    </body>
+</html>

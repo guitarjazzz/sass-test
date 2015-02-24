@@ -1,0 +1,196 @@
+body{
+   background: #eeeeee;
+   font-family: Andrew Andreas;
+}
+.wrapper{
+   // background: #eeeeee;
+}
+.wrapper,
+.navigation{
+   width: 1260px;
+   margin: 0 auto;
+   position: relative;
+   @include desktop {
+      width: 1000px;
+      @include tablet {
+         width: 100%;
+      }
+   }
+}
+.header{
+   width: 100%;
+   height: 130px;
+   background-color: #414cb7;
+   padding-top: 1px;
+   @include box-shadow(0px 1px 10px -2px #000000);
+   @include tablet {
+      display: none;
+   }
+}
+.navigation{
+   margin-top: 90px;
+   font-weight: bold;
+   font-size: 16px;
+   a{
+      display: inline-block;
+   }
+}
+.addBtn{
+   width: 56px;
+   height: 56px;
+   display: block;
+   background-color: #ff3e81;
+   position: absolute;
+   top: 11px;
+   right: 68px;
+   @include border-radius(30px);
+   @include box-shadow(0px 1px 9px -2px #000000);
+   text-align: center;
+   font-size: 35px;
+   line-height: 51px;
+   font-weight: normal;
+   color:#ffffff;
+   &:hover{
+      background-color: lighten(#ff3e81,5%);
+   }
+   @include desktop {
+      right: 5px;
+      @include tablet {
+         right: 20px;
+      }
+   }
+}
+.btnIcons{
+   width: 48px;
+   height: 30px;
+   display: inline-block;
+   >span{
+      display: block;
+      margin: auto;
+      width: 12px;
+      line-height: 28px;
+   }
+}
+.addBtn{
+   display: none;
+   @include tablet {
+      display: block;
+      font-size: 23px;
+      line-height: 63px;
+      position: absolute;
+      top: 216px;
+   }
+}
+.btnBack{
+   display: none;
+   @include tablet {
+      display: block;
+      position: absolute;
+      left: 12px;
+   }
+}
+.searchIcon{
+   margin-left: 185px;
+}
+a{
+   cursor: pointer;
+   outline: 0;
+   color: #E0E1F2;
+   &:hover{
+      color: #ffffff;
+      text-decoration: none;
+   }
+   &:active{
+      outline: 0;
+   }
+}
+.userList{
+   width: 445px;
+   float: left;
+   @include desktop {
+      width: 405px;
+      @include tablet {
+         display: none;
+      }
+   }
+}
+.usersWrap{
+   margin-left: 74px;
+   margin-top: 10px;
+   padding-bottom: 10px;
+   border-bottom: 1px solid #d6d5d5;
+   position: relative;
+}
+.userItem{
+   clear: both;
+   font-weight: bold;
+   height: 64px;
+   position: relative;
+   &:hover{
+       background-color: darken(#eeeeee, 3%);
+      .userName{
+         color: lighten(#262626, 20%);
+      }
+   }
+}
+.userIcon{
+   width: 40px;
+   height: 40px;
+   display: inline-block;
+   line-height: 64px;
+   img{
+      width: 100%;
+      margin-left: 14px;
+      @include border-radius(20px);
+   }
+}
+.userName{
+   margin-left: 25px;
+   display: inline-block;
+   vertical-align: middle;
+   color:#000000;
+   &:hover{
+      text-decoration: none;
+   }
+}
+.userLink{
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.filterIcon{
+   font-size: 22px;
+   color: #ff3e81;
+   position: absolute;
+   top: 20px;
+   left: -40px;
+   font-weight: bold;
+}
+.icon_pencil{
+   width: 50px;
+   height: 50px;
+   background: url(../../img/pencil.svg) no-repeat;
+   background-size: cover;
+}
+
+.icon_star{
+   width: 150px;
+   height: 150px;
+   background: url(../../img/star.svg) no-repeat;
+   background-size: cover;
+}
+.icon_magnifier{
+   width: 150px;
+   height: 150px;
+   background: url(../../img/magnifier.svg) no-repeat;
+   background-size: cover;
+}
+@include tablet {
+   .btnStar,
+   .btnShare{
+      display: none;
+   }
+}
