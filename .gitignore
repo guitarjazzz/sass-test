@@ -1,0 +1,11 @@
+node_modules
+.tmp
+.sass-cache
+*.map
+app/styles/scss/*.css
+app/bower_components
+app/styles/css
+dist
+.idea
+Thumbs.db
+npm-debug.log
